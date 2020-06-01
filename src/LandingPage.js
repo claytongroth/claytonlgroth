@@ -21,17 +21,18 @@ const LandingPage = ({enter}) => {
                 <style>{'body { background-repeat: no-repeat; }'}</style>
             </Helmet>
             <div id="landingCenter"></div>
-            <Jumbotron id="landingJumbo" className="row justify-content-center align-self-center">
-              <h1 id="title-name">Clayton Groth</h1>
-
-                        <a href="https://github.com/claytongroth" target="_blank" rel="noopener norefferer">
-                            <img style={iconStyle} src="/images/github-logo.svg" alt="GitHub"/>
-                        </a>
-                        <a href="https://www.linkedin.com/in/clayton-groth-156aaa115/" target="_blank" rel="noopener norefferer">
-                            <img style={{...iconStyle, marginLeft: "2rem"}} src="/images/linkedin.svg" alt="linkedIn"/>
-                        </a>
+            <Jumbotron id="landingJumbo">
+              <div id="title-name">Clayton Groth</div>
+                {/* <a href="https://github.com/claytongroth" target="_blank" rel="noopener norefferer">
+                    <img style={iconStyle} src="/images/github-logo.svg" alt="GitHub"/>
+                </a>
+                <a href="https://www.linkedin.com/in/clayton-groth-156aaa115/" target="_blank" rel="noopener norefferer">
+                    <img style={{...iconStyle, marginLeft: "2rem"}} src="/images/linkedin.svg" alt="linkedIn"/>
+                </a>
+                <br/> */}
                 <br/>
-                <h3 id="mellow-title-name">Full Stack Developer</h3>
+                <div id="mellow-title-name">Full Stack Developer</div>
+                <br/>
                 <button id="landingButton" onClick={enter}> Enter </button>
             </Jumbotron>
             </div>

@@ -10,8 +10,10 @@ function App() {
   return (
     <div className="App">
       {landing ?
-        <LandingPage enter={()=>setLanding(false)} seenInside={landing}/>
-        : <MainPage backToLanding={()=>setLanding(true)}/>
+      <div className={landing ? "fadeIn" : "fadeOut"}>
+        <LandingPage  enter={()=>setLanding(false)} seenInside={landing}/>
+      </div>
+        : <MainPage className={!landing ? "fadeIn" : "fadeOut"} backToLanding={()=>setLanding(true)}/>
       }
     </div>
   );
