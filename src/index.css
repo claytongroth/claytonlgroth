@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +8,113 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,html{
+  height: 100%;
+  width: 100%;
+  /* font-family: 'PT Mono', monospace; */
+  font-family: "Montserrat";
+}
+
+div#preload {
+  display: none;
+}
+
+#title-name {
+  font-size: 4rem;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  letter-spacing: .5rem;
+}
+#mellow-title-name {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  letter-spacing: .25rem;
+}
+
+#landingCenter {
+  /* background: radial-gradient( 
+    closest-side, 
+    rgba(255,255,255, 1), 
+    rgba(255,255,255, .75), 
+    rgba(255,255,255, .5),  
+    rgba(255,255,255, .25),
+    rgba(255,255,255, .1) ); */
+  background: rgba(255,255,255, .5); 
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  width: 100%;
+  height: 150vh;
+  transform: translate(-50%,-50%);
+  border-radius: 50px;
+}
+
+#landingJumbo{
+  background: radial-gradient(
+      circle closest-side,
+      rgba(255,255,255, .7),
+      rgba(255,255,255, 0)
+  );
+  position: absolute;
+  top: 40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50px;
+}
+
+#landingButton {
+  color: #fff !important;
+  text-decoration: none;
+  background: rgba(32,29,24, .8);
+  height: 2rem;
+  width: 8rem;
+  border-radius: 1rem;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  letter-spacing: .15rem;
+  font-family: "Montserrat";
+}
+
+#landingButton:hover {
+  cursor: pointer;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+}
+
+#landingButton:focus {     
+  outline:none;
+  background-color: rgba(32,29,24, 1);;    
+}
+
+@media only screen and (max-width: 600px) {
+  #title-name {
+    font-size: 2rem;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    letter-spacing: .25rem;
+  }
+  #mellow-title-name {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    letter-spacing: .15rem;
+  }
+  #landingCenter {
+    /* background: radial-gradient( 
+      closest-side, 
+      rgba(255,255,255, 1), 
+      rgba(255,255,255, .85), 
+      rgba(255,255,255, .75), 
+      rgba(255,255,255, .65),
+      rgba(255,255,255, .55) 
+    ); */
+    background: rgba(255,255,255, .5); 
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    height: 150vh;
+    transform: translate(-50%,-50%);
+    border-radius: 50px;
+  }
+
 }
