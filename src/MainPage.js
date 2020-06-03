@@ -1,5 +1,9 @@
 import React from 'react';
 import { Row, Col, Carousel, Container, Image } from 'react-bootstrap';
+import Chess, { ChessCaption } from './components/Chess'
+import Geovea, { GeoveaCaption } from './components/Geovea'
+import GraphQLFull, { GraphQLFullCaption } from './components/GraphQLFull'
+import Ambul8, { Ambul8Caption } from './components/Ambul8';
 
 const iconStyle = {
     width: "2rem",
@@ -9,8 +13,8 @@ const iconStyle = {
 
 const MainPage = ({backToLanding}) => {
     return ( 
-        <Container fluid>
-            <button  className="back-btn" id="landingButton" onClick={backToLanding}> Back </button>
+        <Container  fluid>
+            {/* <button  className="back-btn" id="landingButton" onClick={backToLanding}> Back </button> */}
             <h1 style={{textAlign: "left", fontSize: "3rem"}} id="title-name">Clayton Groth</h1>
             <br/>
             <br/>
@@ -27,9 +31,8 @@ const MainPage = ({backToLanding}) => {
                 <Col>
                     <p style={{fontSize: "2rem"}} className="mellow-banner-text"> 
                         Hello, my name is Clayton Groth. I am a full stack developer specializing in NodeJS and ReactJS. 
-                        A genuine love of problem solving draws me to programming. More text.  More text.  More text.  More text.  
-                        More text.  More text.  More text.  More text.  More text.  More text.  More text.  More text.  More text. 
-                        More text.  More text.  More text.  More text.  More text.  More text.  More text.  More text.  More text. 
+                        A genuine love of problem solving draws me to programming. I am fueled by creativity and the ability to 
+                        apply analytical reasoning in my work!
                     </p>
                 </Col>
             </Row>
@@ -80,41 +83,51 @@ const MainPage = ({backToLanding}) => {
                 </Col>
             </Row>
             <br/>
-            <h5 style={{textDecoration: "underline", textAlign: "left", fontSize: "2rem"}}> Resume PDF(123kb) </h5>
+            <h5 style={{textDecoration: "underline", textAlign: "left", fontSize: "2rem"}}> 
+            <a style={{color: "black"}} href="/resume/Clayton_Groth_Resume.pdf" download> Resume PDF(72.5kb) </a>
+            </h5>
             <br/>
             <br/>
             <h5 style={{textDecoration: "underline", textAlign: "left", fontSize: "2rem"}}> Contact Me: </h5>
             <ul>
-                <li style={{textAlign: "left"}}>method</li>
-                <li style={{textAlign: "left"}}>method</li>
-                <li style={{textAlign: "left"}}>method</li>
-                <li style={{textAlign: "left"}}>method</li>
+                <li style={{textAlign: "left"}}>
+                    <a style={{color: "black"}} href="mailto:claytoncgrth@gmail.com">Send Me an Email</a>
+                </li>
+                <li style={{textAlign: "left"}}>
+                   <a 
+                        style={{color: "black"}}
+                        href="https://www.linkedin.com/in/clayton-groth-156aaa115/" 
+                        target="_blank" rel="noopener norefferer"
+                    >
+                        Message Me On LinkedIn
+                    </a> 
+                </li>
             </ul>
 
             <h3 style={{textDecoration: "underline"}}>Projects</h3>
-            <Carousel>
+            <Carousel style={{height: 500}}>
                 <Carousel.Item>
-                    <div style={{height: 400, background: "black"}}>
-                    </div>
+                        <Geovea/>
                     <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                       <GeoveaCaption/>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item style={{backgroundColor: "black"}}>
+                        <GraphQLFull/>
+                    <Carousel.Caption style ={{background: "black"}}>
+                        <GraphQLFullCaption/>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <div style={{height: 400, background: "black"}}>
-                    </div>
+                        <Ambul8/>
                     <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <Ambul8Caption/>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <div style={{height: 400, background: "black"}}>
-                    </div>
+                        <Chess/>
                     <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <ChessCaption/>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

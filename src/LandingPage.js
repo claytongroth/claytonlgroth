@@ -1,19 +1,30 @@
 import React, {useState, useEffect} from 'react';
-import { Jumbotron, Row, Col } from 'react-bootstrap';
+import { Jumbotron } from 'react-bootstrap';
 import {Helmet} from 'react-helmet';
 
-const iconStyle = {
-    width: "2rem",
-    padding: 1
-}
 
 const LandingPage = ({enter}) => {
     const [show, setShow] = useState(false);
+    const [fadedInName, setFadedInName] = useState(false);
+    const [fadedInTitle, setFadedInTitle] = useState(false);
+    const [fadedInButton, setFadedInButton] = useState(false);
 
-    useEffect(() => { setShow(true); }, [])
+
+    useEffect(() => { 
+        setShow(true); 
+        setTimeout(() => {
+            setFadedInName(true)
+        }, 1000);
+        setTimeout(() => {
+            setFadedInTitle(true)
+        }, 1500);
+        setTimeout(() => {
+            setFadedInButton(true)
+        }, 1700);
+    }, [])
 
     return (  
-        <div>
+        <div style={{overflow:"hidden"}}>
           <div> 
             <Helmet defer={true}>
                 <style>{`body { background-image: ${show? 'url(images/chaos.jpg), url(images/chaosblur.jpg)' : 'url(sky.PNG)'}; }`}</style>
@@ -22,18 +33,11 @@ const LandingPage = ({enter}) => {
             </Helmet>
             <div id="landingCenter"></div>
             <Jumbotron id="landingJumbo">
-              <div id="title-name">Clayton Groth</div>
-                {/* <a href="https://github.com/claytongroth" target="_blank" rel="noopener norefferer">
-                    <img style={iconStyle} src="/images/github-logo.svg" alt="GitHub"/>
-                </a>
-                <a href="https://www.linkedin.com/in/clayton-groth-156aaa115/" target="_blank" rel="noopener norefferer">
-                    <img style={{...iconStyle, marginLeft: "2rem"}} src="/images/linkedin.svg" alt="linkedIn"/>
-                </a>
-                <br/> */}
+                <div className={fadedInName ? "fade-in" : "fade-out"} id="title-name">Clayton Groth</div>
                 <br/>
-                <div id="mellow-title-name">Full Stack Developer</div>
+                <div  className={fadedInTitle ? "fade-in" : "fade-out"} id="mellow-title-name">Full Stack Developer</div>
                 <br/>
-                <button id="landingButton" onClick={enter}> Enter </button>
+                <button className={fadedInButton ? "fade-in" : "fade-out"} id="landingButton" onClick={enter}> Enter </button>
             </Jumbotron>
             </div>
           </div>

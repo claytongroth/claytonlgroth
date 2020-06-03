@@ -15,6 +15,28 @@ body,html{
   font-family: "Montserrat";
 }
 
+/* body::-webkit-scrollbar-track
+{
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+} */
+
 div#preload {
   display: none;
 }
@@ -36,6 +58,8 @@ div#preload {
   font-size: larger;
   letter-spacing: .25rem;
 }
+
+
 
 #landingCenter {
   /* background: radial-gradient( 
@@ -99,20 +123,15 @@ div#preload {
   right: 10px;
 }
 
-.fadeOut{
-  opacity:0;
-  width:0;
-  height:0;
-  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 5s;
-
+.fade-out {
+  opacity: 0.01;
 }
-.fadeIn {
-  opacity:1;
-  width:100px;
-  height:100px;
-  transition: width 0.5s, height 0.5s, opacity 0.5s 5s;
 
+.fade-in {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
 }
+
 
 @media only screen and (max-width: 600px) {
   #title-name {
