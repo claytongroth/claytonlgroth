@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import { Row, Col, Carousel, Container, Image } from 'react-bootstrap';
 import Chess, { ChessCaption } from './components/Chess'
 import Geovea, { GeoveaCaption } from './components/Geovea'
@@ -12,8 +12,23 @@ const iconStyle = {
 
 
 const MainPage = ({backToLanding}) => {
+
+    const [fadedOut, setFadedOut] = useState(true);
+
+    useEffect(() => {
+        let whiteoutTimer = setTimeout(() => {
+            setFadedOut(false)
+        }, 500);
+        return () => {
+            clearTimeout(whiteoutTimer);
+        }
+    }, [])
+
     return ( 
+        <Fragment>
+        <div className={fadedOut ? "faded-out" : "faded-in"}></div>
         <Container  fluid>
+            
             {/* <button  className="back-btn" id="landingButton" onClick={backToLanding}> Back </button> */}
             <h1 style={{textAlign: "left", fontSize: "3rem"}} id="title-name">Clayton Groth</h1>
             <br/>
@@ -32,52 +47,69 @@ const MainPage = ({backToLanding}) => {
                     <p style={{fontSize: "2rem"}} className="mellow-banner-text"> 
                         Hello, my name is Clayton Groth. I am a full stack developer specializing in NodeJS and ReactJS. 
                         A genuine love of problem solving draws me to programming. I am fueled by creativity and the ability to 
-                        apply analytical reasoning in my work!
+                        apply analytical reasoning in my work! In my free time I love to travel, climb, and explore new music!
                     </p>
                 </Col>
             </Row>
             <br/>
             <br/>
-            <Row>
+            <Row noGutters style={{ height: 500 }}>
                 <Col>
-                    <div style={{height: 500, background: "black"}}>
-                        <Image src="holder.js/100px250" fluid />
-                    </div>
+                    <Image style={{height: 500, width: "auto", borderRadius: 250}} src="images/ATD.jpg" alt="image" fluid />
                 </Col>
             </Row>
             <br/>
+            <br/>
             <Row>
-                <Col lg={5}>
+                <Col lg={4}>
                     <h3> Front End</h3>
                     <hr/>
                     <ul>
-                        <li style={{textAlign: "left"}}>Tech I know (3yrs)</li>
-                        <li style={{textAlign: "left"}}>Tech I know</li>
-                        <li style={{textAlign: "left"}}>Tech I know</li>
-                        <li style={{textAlign: "left"}}>Tech I know</li>
-
+                        <li style={{textAlign: "left"}}>Javascript ES6 (4yrs)</li>
+                        <li style={{textAlign: "left"}}>HTML5, CSS 4(yrs)</li>
+                        <li style={{textAlign: "left"}}>ReactJS (3yrs)</li>
+                        <li style={{textAlign: "left"}}>Apollo + GraphQL</li>
+                        <li style={{textAlign: "left"}}>React-Redux</li>
+                        <li style={{textAlign: "left"}}>React-Router</li>
+                        <li style={{textAlign: "left"}}>Popular CSS frameworks</li>
+                        <li style={{textAlign: "left"}}>Responsive Web Design</li>
+                        <li style={{textAlign: "left"}}>Web Mapping / Web GIS</li>
+                        <li style={{textAlign: "left"}}>React-Mapbox, Mapbox-gl-js</li>
+                        <li style={{textAlign: "left"}}>React-Native</li>
+                        <li style={{textAlign: "left"}}>Some AngularJS experience</li>
 
                     </ul>
                 </Col>
-                <Col lg={5}>
+                <Col lg={4}>
                     <h3> Back End</h3>
                     <hr/>
                     <ul>
-                        <li style={{textAlign: "left"}}>Tech I know</li>
-                        <li style={{textAlign: "left"}}>Tech I know</li>
-                        <li style={{textAlign: "left"}}>Tech I know</li>
-                        <li style={{textAlign: "left"}}>Tech I know</li>
+                        <li style={{textAlign: "left"}}>NodeJS, NPM (4yrs)</li>
+                        <li style={{textAlign: "left"}}>Python (3yrs)</li>
+                        <li style={{textAlign: "left"}}>ExpressJS</li>
+                        <li style={{textAlign: "left"}}>MERN stack</li>
+                        <li style={{textAlign: "left"}}>MongoDB</li>
+                        <li style={{textAlign: "left"}}>Mongoose</li>
+                        <li style={{textAlign: "left"}}>SQL</li>
+                        <li style={{textAlign: "left"}}>MySQL</li>
+                        <li style={{textAlign: "left"}}>PostGres SQL</li>
+                        <li style={{textAlign: "left"}}>Sequelize</li>
+                        <li style={{textAlign: "left"}}>PassportJS</li>
+                        <li style={{textAlign: "left"}}>FireBase</li>
+                        <li style={{textAlign: "left"}}>Authentication</li>
 
                     </ul>
                 </Col>
-                <Col lg={2}>
+                <Col lg={4}>
                     <h3 style={{opacity: .8}}> Other Skills</h3>
                     <hr/>
                     <ul>
-                        <li style={{textAlign: "left"}}>Tech I know</li>
-                        <li style={{textAlign: "left"}}>Tech I know</li>
-                        <li style={{textAlign: "left"}}>Tech I know</li>
-                        <li style={{textAlign: "left"}}>Tech I know</li>
+                        <li style={{textAlign: "left"}}>Java and C++ experience</li>
+                        <li style={{textAlign: "left"}}>Very comfortable in Unix/Linux</li>
+                        <li style={{textAlign: "left"}}>Git workflow</li>
+                        <li style={{textAlign: "left"}}>Lots of Python libraries!</li>
+                        <li style={{textAlign: "left"}}>Excellent interpersonal and communication skills.</li>
+
 
                     </ul>
                 </Col>
@@ -133,7 +165,7 @@ const MainPage = ({backToLanding}) => {
             </Carousel>
             <br/>
             <br/>
-            <h1 style={{textAlign: "left"}}> Testimonials </h1>
+            {/* <h1 style={{textAlign: "left"}}> Testimonials </h1>
             <br/>
             <br/>
             <Row>
@@ -161,9 +193,10 @@ const MainPage = ({backToLanding}) => {
                         lakmsdalkndlkjandklamdklaldnskandl
                     </p>
                 </Col>
-            </Row>
+            </Row> */}
            
         </Container>
+        </Fragment>
     );
 }
  

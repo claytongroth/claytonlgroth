@@ -5,7 +5,7 @@ const Ambul8 = () => {
     return ( 
         <div style={{ background: "black"}}>
             <div style={{paddingTop: 20, height: 300}}>
-                <img style={{height: 100, width: 100, marginRight: 10}} src="/images/flask.svg" alt="flask" />
+                <img style={{height: 100, width: 100, marginRight: 10, marginBottom: "15%"}} src="/images/flask.svg" alt="flask" />
                 <iframe 
                     title="myvideo"
                     width="50%" 
@@ -13,7 +13,7 @@ const Ambul8 = () => {
                     frameBorder="0"
                     src={`https://www.youtube.com/embed/22afcnz0e3U?rel=0&amp;autoplay=1&mute=1`}>
                 </iframe>
-                <img style={{height: 100, width: 100, marginLeft: 10}} src="/images/python.svg" alt="python" />
+                <img style={{height: 100, width: 100, marginLeft: 10, marginBottom: "15%"}} src="/images/python.svg" alt="python" />
 
             </div>
             <div style={{height: 200}}></div>
