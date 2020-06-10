@@ -11,9 +11,10 @@ const iconStyle = {
 }
 
 
-const MainPage = ({backToLanding}) => {
+const MainPage = ({backToLanding, isMobile}) => {
 
     const [fadedOut, setFadedOut] = useState(true);
+    const [hide, setHide] = useState(false);
 
     useEffect(() => {
         let whiteoutTimer = setTimeout(() => {
@@ -24,9 +25,21 @@ const MainPage = ({backToLanding}) => {
         }
     }, [])
 
+    useEffect(() => {
+        let hideTimer;
+        if (!fadedOut){
+            hideTimer = setTimeout(() => {
+                setHide(true)
+            }, 500);
+        }
+        return () => {
+            clearTimeout(hideTimer);
+        }
+    }, [fadedOut])
+
     return ( 
         <Fragment>
-        <div className={fadedOut ? "faded-out" : "faded-in"}></div>
+        {!hide && <div className={fadedOut ? "faded-out" : "faded-in"}></div>}
         <Container  fluid>
             
             {/* <button  className="back-btn" id="landingButton" onClick={backToLanding}> Back </button> */}
@@ -44,7 +57,7 @@ const MainPage = ({backToLanding}) => {
             <br/>
             <Row>
                 <Col>
-                    <p style={{fontSize: "2rem"}} className="mellow-banner-text"> 
+                    <p style={{fontSize: isMobile ? "1rem" : "2rem"}} className="mellow-banner-text"> 
                         Hello, my name is Clayton Groth. I am a full stack developer specializing in NodeJS and ReactJS. 
                         A genuine love of problem solving draws me to programming. I am fueled by creativity and the ability to 
                         apply analytical reasoning in my work! In my free time I love to travel, climb, and explore new music!
@@ -53,9 +66,9 @@ const MainPage = ({backToLanding}) => {
             </Row>
             <br/>
             <br/>
-            <Row noGutters style={{ height: 500 }}>
+            <Row noGutters style={{ height: isMobile ? 300 : 500 }}>
                 <Col>
-                    <Image style={{height: 500, width: "auto", borderRadius: 250}} src="images/ATD.jpg" alt="image" fluid />
+                    <Image style={{height: isMobile ? 300 : 500 , width: "auto", borderRadius: isMobile ? 200 : 250 }} src="images/ATD.jpg" alt="image" fluid />
                 </Col>
             </Row>
             <br/>
@@ -66,7 +79,7 @@ const MainPage = ({backToLanding}) => {
                     <hr/>
                     <ul>
                         <li style={{textAlign: "left"}}>Javascript ES6 (4yrs)</li>
-                        <li style={{textAlign: "left"}}>HTML5, CSS 4(yrs)</li>
+                        <li style={{textAlign: "left"}}>HTML5, CSS (4yrs)</li>
                         <li style={{textAlign: "left"}}>ReactJS (3yrs)</li>
                         <li style={{textAlign: "left"}}>Apollo + GraphQL</li>
                         <li style={{textAlign: "left"}}>React-Redux</li>
@@ -115,12 +128,23 @@ const MainPage = ({backToLanding}) => {
                 </Col>
             </Row>
             <br/>
-            <h5 style={{textDecoration: "underline", textAlign: "left", fontSize: "2rem"}}> 
-            <a style={{color: "black"}} href="/resume/Clayton_Groth_Resume.pdf" download> Resume PDF(72.5kb) </a>
+
+            <h5 style={{textDecoration: "underline", textAlign: "left", fontSize: isMobile ? "1.5rem" : "2rem"}}> 
+                <a 
+                    style={{color: "black", cursor: "pointer"}} 
+                    href="/resume/Clayton_Groth_Resume.pdf" 
+                    download = "Clayton_Groth_Resume"
+                    target="_blank" rel="noopener noreferrer"
+                > 
+                    Resume PDF(72.5kb) 
+                </a>
             </h5>
+            
+
             <br/>
             <br/>
-            <h5 style={{textDecoration: "underline", textAlign: "left", fontSize: "2rem"}}> Contact Me: </h5>
+
+            <h5 style={{textDecoration: "underline", textAlign: "left", fontSize: isMobile ? "1.5rem" : "2rem"}}> Contact Me: </h5>
             <ul>
                 <li style={{textAlign: "left"}}>
                     <a style={{color: "black"}} href="mailto:claytoncgrth@gmail.com">Send Me an Email</a>
@@ -139,49 +163,51 @@ const MainPage = ({backToLanding}) => {
             <h3 style={{textDecoration: "underline"}}>Projects</h3>
             <Carousel style={{height: 500}}>
                 <Carousel.Item>
-                        <Geovea/>
+                        <Geovea isMobile={isMobile} />
                     <Carousel.Caption>
-                       <GeoveaCaption/>
+                       <GeoveaCaption isMobile={isMobile}/>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item style={{backgroundColor: "black"}}>
-                        <GraphQLFull/>
+                        <GraphQLFull isMobile={isMobile}/>
                     <Carousel.Caption style ={{background: "black"}}>
-                        <GraphQLFullCaption/>
+                        <GraphQLFullCaption isMobile={isMobile}/>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                        <Ambul8/>
+                        <Ambul8 isMobile={isMobile}/>
                     <Carousel.Caption>
-                        <Ambul8Caption/>
+                        <Ambul8Caption isMobile={isMobile}/>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                        <Chess/>
+                        <Chess isMobile={isMobile}/>
                     <Carousel.Caption>
-                        <ChessCaption/>
+                        <ChessCaption isMobile={isMobile}/>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
             <br/>
             <br/>
-            {/* <h1 style={{textAlign: "left"}}> Testimonials </h1>
+            <h1 style={{textAlign: "left"}}> Testimonials </h1>
             <br/>
             <br/>
             <Row>
-                <Col lg={{span: 1, offset: 1}}>
-                    <Image style={{height: 100, width: 100}} src="images/linkedin.svg" roundedCircle />
+                <Col lg={{span: 2, offset: 1}}>
+                    <Image style={{height: "90%", maxHeight: 300, maxWidth: 350, width: "100%"}} src="images/Codie.jpg" roundedCircle />
                 </Col>
-                <Col lg={2}>
+                <Col lg={4} style={{textAlign: "left"}}>
+                    <h4>Codie See</h4>
+                    <h6 style={{opactiy: .6, fontStyle: "italic"}}>Program Specialst/GIS web-devloper at WI State Cartographer's Office</h6>
                     <p> 
-                        lakmsdalkndlkjandklamdklaldnskandl
-                        lakmsdalkndlkjandklamdklaldnskandl
-                        lakmsdalkndlkjandklamdklaldnskandl
-                        lakmsdalkndlkjandklamdklaldnskandl
+                        The technology, resourcefulness, and energy that Clayton brought to our web products and lab as a whole was dynamic.  
+                        With his lead, were we able to develop higher quality and more sustainable web applications while educating and engaging our project teams.  
+                        His command of development is top-notch, detailed, very well documented, and committed to quality clearly demonstrated in the result.  
+                        As a former manager, I can’t recommend him highly enough.
                     </p>
                 </Col>
             </Row>
-            <Row>
+            {/* <Row>
                 <Col lg={{span: 1, offset: 5}}>
                     <Image style={{height: 100, width: 100}} src="images/linkedin.svg" roundedCircle />
                 </Col>

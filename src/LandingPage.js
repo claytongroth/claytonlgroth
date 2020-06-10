@@ -3,7 +3,7 @@ import { Jumbotron } from 'react-bootstrap';
 import {Helmet} from 'react-helmet';
 
 
-const LandingPage = ({enter}) => {
+const LandingPage = ({enter, isMobile}) => {
     const [show, setShow] = useState(false);
     const [fadedInName, setFadedInName] = useState(false);
     const [fadedInTitle, setFadedInTitle] = useState(false);
@@ -52,9 +52,9 @@ const LandingPage = ({enter}) => {
                 </Helmet>
                 <div id="landingCenter"></div>
                 <Jumbotron id="landingJumbo">
-                    <div className={fadedInName ? "fade-in" : "fade-out"} id="title-name">Clayton Groth</div>
+                    <div className={fadedInName ? "fade-in" : "fade-out"} id="title-name" style={isMobile ? {fontSize: "3rem"} : {}}>Clayton Groth</div>
                     <br/>
-                    <div  className={fadedInTitle ? "fade-in" : "fade-out"} id="mellow-title-name">Full Stack Developer</div>
+                    <div  className={fadedInTitle ? "fade-in" : "fade-out"} id="mellow-title-name" style={isMobile ? {fontSize: "2rem"} : {}}>Full Stack Developer</div>
                     <br/>
                     <button className={fadedInButton ? "fade-in" : "fade-out"} id="landingButton" onClick={handleEnter}> Enter </button>
                 </Jumbotron>
