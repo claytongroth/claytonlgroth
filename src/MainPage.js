@@ -66,9 +66,12 @@ const MainPage = ({backToLanding, isMobile}) => {
             </Row>
             <br/>
             <br/>
-            <Row noGutters style={{ height: isMobile ? 300 : 500 }}>
+            <Row noGutters style={{ height: isMobile ? 165 : 500 }}>
                 <Col>
-                    <Image style={{height: isMobile ? 300 : 500 , width: "auto", borderRadius: isMobile ? 200 : 250 }} src="images/ATD.jpg" alt="image" fluid />
+                    <Image style={{height: isMobile ? 165 : 500 , width: "auto", borderRadius: isMobile ? 200 : 250 }} src="images/ATD.jpg" alt="image" fluid />
+                </Col>
+                <Col>
+                    <Image style={{height: isMobile ? 165 : 500 , width: "auto", borderRadius: isMobile ? 200 : 250 }} src="images/ME_CG.jpg" alt="image" fluid />
                 </Col>
             </Row>
             <br/>
@@ -109,7 +112,7 @@ const MainPage = ({backToLanding, isMobile}) => {
                         <li style={{textAlign: "left"}}>Sequelize</li>
                         <li style={{textAlign: "left"}}>PassportJS</li>
                         <li style={{textAlign: "left"}}>FireBase</li>
-                        <li style={{textAlign: "left"}}>Authentication</li>
+                        <li style={{textAlign: "left"}}>Authentication/Authorization</li>
 
                     </ul>
                 </Col>
@@ -136,7 +139,7 @@ const MainPage = ({backToLanding, isMobile}) => {
                     download = "Clayton_Groth_Resume"
                     target="_blank" rel="noopener noreferrer"
                 > 
-                    Resume PDF(72.5kb) 
+                    Resume PDF (72.5kb) 
                 </a>
             </h5>
             
@@ -147,11 +150,11 @@ const MainPage = ({backToLanding, isMobile}) => {
             <h5 style={{textDecoration: "underline", textAlign: "left", fontSize: isMobile ? "1.5rem" : "2rem"}}> Contact Me: </h5>
             <ul>
                 <li style={{textAlign: "left"}}>
-                    <a style={{color: "black"}} href="mailto:claytoncgrth@gmail.com">Send Me an Email</a>
+                    <a style={{color: "black", textDecoration: isMobile ? "underline" : "none"}} href="mailto:claytoncgrth@gmail.com">Send Me an Email</a>
                 </li>
                 <li style={{textAlign: "left"}}>
                    <a 
-                        style={{color: "black"}}
+                        style={{color: "black", textDecoration: isMobile ? "underline" : "none"}}
                         href="https://www.linkedin.com/in/clayton-groth-156aaa115/" 
                         target="_blank" rel="noopener norefferer"
                     >
@@ -194,9 +197,9 @@ const MainPage = ({backToLanding, isMobile}) => {
             <br/>
             <Row>
                 <Col lg={{span: 2, offset: 1}}>
-                    <Image style={{height: "90%", maxHeight: 300, maxWidth: 350, width: "100%"}} src="images/Codie.jpg" roundedCircle />
+                    <Image style={{height: 300, maxHeight: 300, maxWidth: 350, width: 300}} src="images/Codie.jpg" roundedCircle />
                 </Col>
-                <Col lg={4} style={{textAlign: "left"}}>
+                <Col lg={4} style={{textAlign: "left", marginLeft: isMobile ? 0 : 75}}>
                     <h4>Codie See</h4>
                     <h6 style={{opactiy: .6, fontStyle: "italic"}}>Program Specialst/GIS web-devloper at WI State Cartographer's Office</h6>
                     <p> 
