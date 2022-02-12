@@ -39,8 +39,8 @@ export const GeoveaCaption = ({isMobile}) =>
             </a>
         </h3>
         <p style={isMobile ? {fontSize: ".75rem"} : {}} >
-            An awesome travel planning application that I currently do full stack dev for! 
-            Check it out! We use Sequelize, NodeJS, Express, ReactJS and React-Redux.
+            A travel planning application that I used do full stack dev for! 
+            Check it out! We used Sequelize, NodeJS, Express, ReactJS and React-Redux.
         </p>
     </Fragment>
  

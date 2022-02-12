@@ -4,6 +4,7 @@ import Chess, { ChessCaption } from './components/Chess'
 import Geovea, { GeoveaCaption } from './components/Geovea'
 import GraphQLFull, { GraphQLFullCaption } from './components/GraphQLFull'
 import Ambul8, { Ambul8Caption } from './components/Ambul8';
+import Cquant, { CquantCaption } from './components/Cquant';
 
 const iconStyle = {
     width: "2rem",
@@ -71,7 +72,7 @@ const MainPage = ({backToLanding, isMobile}) => {
                     <Image style={{height: isMobile ? 165 : 500 , width: "auto", borderRadius: isMobile ? 200 : 250 }} src="images/ATD.jpg" alt="image" fluid />
                 </Col>
                 <Col>
-                    <Image style={{height: isMobile ? 165 : 500 , width: "auto", borderRadius: isMobile ? 200 : 250 }} src="images/ME_CG.jpg" alt="image" fluid />
+                    <Image style={{height: isMobile ? 165 : 500 , width: "auto", borderRadius: isMobile ? 200 : 250 }} src="images/headshot.jpeg" alt="image" fluid />
                 </Col>
             </Row>
             <br/>
@@ -81,9 +82,9 @@ const MainPage = ({backToLanding, isMobile}) => {
                     <h3> Front End</h3>
                     <hr/>
                     <ul>
-                        <li style={{textAlign: "left"}}>Javascript ES6 (4yrs)</li>
-                        <li style={{textAlign: "left"}}>HTML5, CSS (4yrs)</li>
-                        <li style={{textAlign: "left"}}>ReactJS (3yrs)</li>
+                        <li style={{textAlign: "left"}}>Javascript ES6 (5yrs)</li>
+                        <li style={{textAlign: "left"}}>HTML5, CSS (5yrs)</li>
+                        <li style={{textAlign: "left"}}>ReactJS (4yrs)</li>
                         <li style={{textAlign: "left"}}>Apollo + GraphQL</li>
                         <li style={{textAlign: "left"}}>React-Redux</li>
                         <li style={{textAlign: "left"}}>React-Router</li>
@@ -100,8 +101,8 @@ const MainPage = ({backToLanding, isMobile}) => {
                     <h3> Back End</h3>
                     <hr/>
                     <ul>
-                        <li style={{textAlign: "left"}}>NodeJS, NPM (4yrs)</li>
-                        <li style={{textAlign: "left"}}>Python (3yrs)</li>
+                        <li style={{textAlign: "left"}}>NodeJS, NPM (5yrs)</li>
+                        <li style={{textAlign: "left"}}>Python (4yrs)</li>
                         <li style={{textAlign: "left"}}>ExpressJS</li>
                         <li style={{textAlign: "left"}}>MERN stack</li>
                         <li style={{textAlign: "left"}}>MongoDB</li>
@@ -165,6 +166,12 @@ const MainPage = ({backToLanding, isMobile}) => {
 
             <h3 style={{textDecoration: "underline"}}>Projects</h3>
             <Carousel style={{height: 500}}>
+                <Carousel.Item>
+                        <Cquant isMobile={isMobile} />
+                    <Carousel.Caption>
+                       <CquantCaption isMobile={isMobile}/>
+                    </Carousel.Caption>
+                </Carousel.Item>
                 <Carousel.Item>
                         <Geovea isMobile={isMobile} />
                     <Carousel.Caption>
