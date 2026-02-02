@@ -196,6 +196,7 @@ const MainPage = ({backToLanding, isMobile}) => {
                     <ul>
                         <li style={{textAlign: "left"}}>NumPy, Pandas, SciPy</li>
                         <li style={{textAlign: "left"}}>scikit-learn, TensorFlow</li>
+                        <li style={{textAlign: "left"}}>Experience in GPU based computing for ML</li>
                         <li style={{textAlign: "left"}}>Matplotlib, Jupyter</li>
                         <li style={{textAlign: "left"}}>Large-scale data processing</li>
                         <li style={{textAlign: "left"}}>Parallel computing</li>
