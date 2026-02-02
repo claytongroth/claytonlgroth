@@ -280,7 +280,7 @@ const MainPage = ({backToLanding, isMobile}) => {
                     download = "Clayton_Groth_Resume"
                     target="_blank" rel="noopener noreferrer"
                 >
-                    Resume PDF
+                    Resume PDF (129kb)
                 </a>
             </h5>
             
