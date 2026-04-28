@@ -92,7 +92,7 @@ const MainPage = ({backToLanding, isMobile}) => {
 
             <div style={{textAlign: "left", marginBottom: "2rem"}}>
                 <h4 style={{marginBottom: "0.25rem"}}>cQuant</h4>
-                <p style={{fontStyle: "italic", opacity: 0.7, marginBottom: "0.5rem"}}>Senior Software Engineer | Remote | January 2021 – Present</p>
+                <p style={{fontStyle: "italic", opacity: 0.7, marginBottom: "0.5rem"}}>Staff Software Engineer | Remote | January 2021 – Present</p>
                 <ul>
                     <li>Lead technical design and implementation of software architecture for production systems.</li>
                     <li>Built a robust renewable energy valuation tool from the ground up with geospatial tech and energy grid based analysis.</li>
