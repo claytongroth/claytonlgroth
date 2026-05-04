@@ -276,7 +276,7 @@ const MainPage = ({backToLanding, isMobile}) => {
             <h5 style={{textDecoration: "underline", textAlign: "left", fontSize: isMobile ? "1.5rem" : "2rem"}}>
                 <a
                     style={{color: "black", cursor: "pointer"}}
-                    href="/resume/Clayton_Groth_Resume.pdf"
+                    href="/resume/Clayton_Groth_Resume_04_26.pdf"
                     download = "Clayton_Groth_Resume"
                     target="_blank" rel="noopener noreferrer"
                 >
