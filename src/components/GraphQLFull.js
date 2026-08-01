@@ -6,7 +6,7 @@ const GraphQLFull = ({isMobile}) => {
     return ( 
         <div >
             <div style={{height: 50}}></div>
-            <img style={isMobile ? {height: 100, width: "90%", borderRadius: "50%"} : {height: 250, borderRadius: "50%"}} src="/images/fullstack.png" alt="GrahpQL"></img>
+            <img style={isMobile ? {height: 100, width: "90%", borderRadius: "50%"} : {height: 250, borderRadius: "50%"}} src="/images/fullstack.png" alt="GraphQL"></img>
             <div style={{height: isMobile ? 350 : 200}}></div>
         </div>    
     );
@@ -18,7 +18,7 @@ export const GraphQLFullCaption = ({isMobile}) =>
             <a
                 style={isMobile ? {color: "white", fontSize: "1rem"} : {color: "white"}}
                 href="https://github.com/claytongroth/GraphQL-Apollo-React-Fullstack-Template-from-scratch-" 
-                target="_blank" rel="noopener norefferer"
+                target="_blank" rel="noopener noreferrer"
             >
                 GraphQL Apollo Express Mongo React Full Stack Template                             
             </a>

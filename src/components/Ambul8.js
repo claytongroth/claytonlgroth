@@ -38,7 +38,7 @@ export const Ambul8Caption = ({isMobile}) =>
                 style={isMobile ? {color: "white", fontSize: "1rem"} : {color: "white"}}
                 style={{color: "white"}}
                 href="https://github.com/claytongroth/Ambul8_Walkability" 
-                target="_blank" rel="noopener norefferer"
+                target="_blank" rel="noopener noreferrer"
             >
                 Ambul8: Walkability App
             </a>

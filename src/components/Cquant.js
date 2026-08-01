@@ -33,7 +33,7 @@ export const CquantCaption = ({isMobile}) =>
                 style={isMobile ? {color: "white", fontSize: "1rem"} : {color: "white"}}
                 style={{color: "white"}}
                 href="https://github.com/claytongroth/React-Redux-Chess" 
-                target="_blank" rel="noopener norefferer"
+                target="_blank" rel="noopener noreferrer"
             >
                 cQuant.io
             </a>

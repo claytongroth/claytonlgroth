@@ -1,10 +1,9 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import { Row, Col, Carousel, Container, Image } from 'react-bootstrap';
-import Chess, { ChessCaption } from './components/Chess'
-import Geovea, { GeoveaCaption } from './components/Geovea'
 import GraphQLFull, { GraphQLFullCaption } from './components/GraphQLFull'
 import Ambul8, { Ambul8Caption } from './components/Ambul8';
 import Cquant, { CquantCaption } from './components/Cquant';
+import GithubProjects from './components/GithubProjects';
 
 const iconStyle = {
     width: "2rem",
@@ -48,10 +47,10 @@ const MainPage = ({backToLanding, isMobile}) => {
             <br/>
             <br/>
             <br/>
-                <a href="https://github.com/claytongroth" target="_blank" rel="noopener norefferer">
+                <a href="https://github.com/claytongroth" target="_blank" rel="noopener noreferrer">
                     <img style={iconStyle} src="/images/github-logo.svg" alt="GitHub"/>
                 </a>
-                <a href="https://www.linkedin.com/in/clayton-groth-156aaa115/" target="_blank" rel="noopener norefferer">
+                <a href="https://www.linkedin.com/in/clayton-groth-156aaa115/" target="_blank" rel="noopener noreferrer">
                     <img style={{...iconStyle, marginLeft: "2rem"}} src="/images/linkedin.svg" alt="linkedIn"/>
                 </a>               
             <br/>
@@ -99,7 +98,7 @@ const MainPage = ({backToLanding, isMobile}) => {
                     <li>Design and deploy containerized applications (Docker, Kubernetes) with infrastructure automation (Ansible, Helm).</li>
                     <li>Develop high-performance production-grade data processing pipelines in Python, Go, and more for handling multi-dimensional environmental, financial and geospatial data.</li>
                     <li>Debugging, monitoring, and testing critical production systems for stability and security.</li>
-                    <li>Provide technical leadership and mentoring to engineering team on software architecture, security, and best practices.</li>
+                    <li>Provide technical leadership and mentoring to the engineering team on software architecture, security, and best practices.</li>
                     <li>Collaborate with web and quantitative development teams to build and improve software in Python, R, JavaScript, Go, Bash/Shell, SQL, and more.</li>
                 </ul>
             </div>
@@ -132,8 +131,8 @@ const MainPage = ({backToLanding, isMobile}) => {
                 <p style={{fontStyle: "italic", opacity: 0.7, marginBottom: "0.5rem"}}>Student Lab Tech | Madison, WI | September 2015 – April 2016</p>
                 <ul>
                     <li>Assisted in research tasks (mostly scripting) for research projects.</li>
-                    <li>Wrote and assisted with various data-pipeline and atmospheric modelling scripts in R, Fortran, Java, and Bash/Shell.</li>
-                    <li>Completed a thesis on various atmospheric correlates of Ozone with EPA & NOAA data.</li>
+                    <li>Wrote and assisted with various data-pipeline and atmospheric modeling scripts in R, Fortran, Java, and Bash/Shell.</li>
+                    <li>Completed a thesis on various atmospheric correlates of ozone with EPA & NOAA data.</li>
                 </ul>
             </div>
 
@@ -177,7 +176,7 @@ const MainPage = ({backToLanding, isMobile}) => {
                         <li style={{textAlign: "left"}}>JavaScript/Node.js (expert)</li>
                         <li style={{textAlign: "left"}}>SQL (expert)</li>
                         <li style={{textAlign: "left"}}>GoLang</li>
-                        <li style={{textAlign: "left"}}>C++,</li>
+                        <li style={{textAlign: "left"}}>C++</li>
                         <li style={{textAlign: "left"}}>Bash/Shell</li>
                         <li style={{textAlign: "left"}}>React (expert), Redux, TypeScript</li>
                         <li style={{textAlign: "left"}}>Node.js, Express, REST APIs</li>
@@ -243,21 +242,21 @@ const MainPage = ({backToLanding, isMobile}) => {
             <br/>
 
             {/* Technical Leadership Section */}
-            <h2 style={{textAlign: "left", borderBottom: "2px solid #333", paddingBottom: "0.5rem"}}>Technical Leadership & Collaboration</h2>
+            <h2 style={{textAlign: "left", borderBottom: "2px solid #333", paddingBottom: "0.5rem"}}>Technical Leadership & Collaboration Skills</h2>
             <br/>
             <Row>
                 <Col lg={6}>
                     <ul>
-                        <li style={{textAlign: "left"}}>Software Architecture: Design high-level system architecture for industry applications</li>
-                        <li style={{textAlign: "left"}}>Technical Mentoring: Guide junior developers and aspiring developers in software best practices</li>
-                        <li style={{textAlign: "left"}}>Idea to Tech Translation: Convert complex research and industry needs into implementable software designs</li>
+                        <li style={{textAlign: "left", fontSize: "0.9rem"}}>Software Architecture: I have designed high-level system architecture for industry applications, keeping scale and security in mind. All in real production environments.</li>
+                        <li style={{textAlign: "left", fontSize: "0.9rem"}}>Technical Mentoring: I am a natural teacher and I like to guide junior developers and aspiring developers. I try to lead by example, ask probing questions, and value humility.</li>
+                        <li style={{textAlign: "left", fontSize: "0.9rem"}}>Idea to Tech Translation: I have extensive experience translating technical ideas or business needs into implementable software designs, from the ground up.</li>
                     </ul>
                 </Col>
                 <Col lg={6}>
                     <ul>
-                        <li style={{textAlign: "left"}}>Cross-disciplinary Communication: Bridge technical and domain expertise with quantitative analysts, environmental professionals, and researchers</li>
-                        <li style={{textAlign: "left"}}>Code Review: Ensure quality, security, and maintainability of software</li>
-                        <li style={{textAlign: "left"}}>Documentation: Create comprehensive technical and user documentation</li>
+                        <li style={{textAlign: "left", fontSize: "0.9rem"}}>Cross-disciplinary Communication: I consider myself a strong communicator across different disciplines and levels of technical understanding. I always go in with respect and a pragmatic attitude.</li>
+                        <li style={{textAlign: "left", fontSize: "0.9rem"}}>Code Review: I value patience and balancing speed with exactness when reviewing code. Especially with today's AI capabilities, patient attention to detail is more important than ever. However, there's a time and place for just moving quickly as well. I believe it is best to know that balance well.</li>
+                        <li style={{textAlign: "left", fontSize: "0.9rem"}}>Documentation: I think the best tech is tech that isn't inscrutable. I have a lot of experience creating documentation and tools aimed at all levels of understanding.</li>
                     </ul>
                 </Col>
             </Row>
@@ -276,11 +275,11 @@ const MainPage = ({backToLanding, isMobile}) => {
             <h5 style={{textDecoration: "underline", textAlign: "left", fontSize: isMobile ? "1.5rem" : "2rem"}}>
                 <a
                     style={{color: "black", cursor: "pointer"}}
-                    href="/resume/Clayton_Groth_Resume_04_26.pdf"
+                    href="/resume/Clayton_L_Groth_Resume.pdf"
                     download = "Clayton_Groth_Resume"
                     target="_blank" rel="noopener noreferrer"
                 >
-                    Resume PDF (129kb)
+                    Resume PDF (108kb)
                 </a>
             </h5>
             
@@ -297,12 +296,17 @@ const MainPage = ({backToLanding, isMobile}) => {
                    <a 
                         style={{color: "black", textDecoration: isMobile ? "underline" : "none"}}
                         href="https://www.linkedin.com/in/clayton-groth-156aaa115/" 
-                        target="_blank" rel="noopener norefferer"
+                        target="_blank" rel="noopener noreferrer"
                     >
                         Message Me On LinkedIn
                     </a> 
                 </li>
             </ul>
+
+            <h3 style={{textDecoration: "underline"}}>GitHub Projects</h3>
+            <GithubProjects isMobile={isMobile} />
+            <br/>
+            <br/>
 
             <h3 style={{textDecoration: "underline"}}>Projects</h3>
             <Carousel style={{height: 500}}>
@@ -310,12 +314,6 @@ const MainPage = ({backToLanding, isMobile}) => {
                         <Cquant isMobile={isMobile} />
                     <Carousel.Caption>
                        <CquantCaption isMobile={isMobile}/>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                        <Geovea isMobile={isMobile} />
-                    <Carousel.Caption>
-                       <GeoveaCaption isMobile={isMobile}/>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item style={{backgroundColor: "black"}}>
@@ -328,12 +326,6 @@ const MainPage = ({backToLanding, isMobile}) => {
                         <Ambul8 isMobile={isMobile}/>
                     <Carousel.Caption>
                         <Ambul8Caption isMobile={isMobile}/>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                        <Chess isMobile={isMobile}/>
-                    <Carousel.Caption>
-                        <ChessCaption isMobile={isMobile}/>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
@@ -357,6 +349,8 @@ const MainPage = ({backToLanding, isMobile}) => {
                     </p>
                 </Col>
             </Row>
+            <br/>
+            <br/>
            
         </Container>
         </Fragment>
